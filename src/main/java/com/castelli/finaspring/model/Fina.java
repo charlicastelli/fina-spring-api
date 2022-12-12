@@ -3,6 +3,7 @@ package com.castelli.finaspring.model;
 
 import java.time.LocalDate;
 
+
 import org.springframework.format.annotation.DateTimeFormat;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -32,8 +33,11 @@ public class Fina {
     @Column(length = 10, nullable = false)
     private String category;
 
-    @DateTimeFormat(pattern = "MMMM/YYYY")
-    private LocalDate date;
+
+    @DateTimeFormat (pattern = "MMMM/YYYY")
+    LocalDate date = LocalDate.now();
+    // @DateTimeFormat(pattern = "MMMM/YYYY")
+    // private LocalDate date;
 
     
 }

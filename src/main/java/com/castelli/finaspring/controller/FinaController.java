@@ -48,6 +48,13 @@ public class FinaController {
         return finaRepository.save(fina);
     }
 
+    // //Salvar
+    // @PostMapping
+    // @ResponseStatus(code = HttpStatus.CREATED)
+    // public Fina create(@RequestBody Fina fina) {
+    //     return finaRepository.save(fina);
+    // }
+
     //editar
     @PutMapping("/{id}")
     public ResponseEntity<Fina> update(@PathVariable Long id, @RequestBody Fina fina) {
