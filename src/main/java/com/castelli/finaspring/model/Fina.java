@@ -4,8 +4,9 @@ package com.castelli.finaspring.model;
 import java.time.LocalDate;
 
 
-import org.springframework.format.annotation.DateTimeFormat;
+//import org.springframework.format.annotation.DateTimeFormat;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import jakarta.persistence.Column;
@@ -34,8 +35,11 @@ public class Fina {
     private String category;
 
 
-    @DateTimeFormat (pattern = "MMMM/YYYY")
-    LocalDate date = LocalDate.now();
+    
+    //@DateTimeFormat(pattern = "yyyy-MM")
+    @JsonFormat(pattern="yyyy-MM")
+    @JsonProperty("_date")
+    private LocalDate date = LocalDate.now();
     // @DateTimeFormat(pattern = "MMMM/YYYY")
     // private LocalDate date;
 
