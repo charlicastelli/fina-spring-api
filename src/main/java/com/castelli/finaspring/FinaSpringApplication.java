@@ -22,8 +22,8 @@ public class FinaSpringApplication {
 
 			Fina test = new Fina();
 			test.setCredit(100.0);
-			test.setDescription("Mercado");
-			test.setCategory("Saída");
+			test.setDescription("Aluguel");
+			test.setCategory("Moradia");
 
 			finaRepository.save(test);
 		};

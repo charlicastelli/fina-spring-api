@@ -31,7 +31,7 @@ public class Fina {
     @Column(length = 200, nullable = false)
     private String description;
 
-    @Column(length = 10, nullable = false)
+    @Column(length = 30, nullable = false)
     private String category;
 
 
