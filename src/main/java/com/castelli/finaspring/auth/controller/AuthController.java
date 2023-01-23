@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.castelli.finaspring.auth.model.User;
+import com.castelli.finaspring.auth.model.AuthUser;
 import com.castelli.finaspring.auth.service.AuthService;
 
 @RestController
@@ -19,7 +19,7 @@ public class AuthController {
     private AuthService authService;
 
     @PostMapping("/register")
-    public User Register(@RequestBody User user) {
+    public AuthUser Register(@RequestBody AuthUser user) {
 
         return  authService.register(user);
 
@@ -27,7 +27,7 @@ public class AuthController {
     }
 
     @PostMapping("/login")
-    public User login(@RequestBody User user) {
+    public AuthUser login(@RequestBody AuthUser user) {
 
         return authService.login(user);
     }

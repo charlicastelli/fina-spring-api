@@ -9,12 +9,20 @@ import jakarta.persistence.*;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class User {
+public class AuthUser {
     @Id
-    @Column(length = 100)
+    @Column(length = 50, nullable = false)
     private String username;
+
+    @Column(length = 50, nullable = false)
     private String name;
+
+    @Column(length = 100, nullable = false)
     private String password;
+
+    @Column(length = 200, nullable = false)
     private String role;
+
+    @Column(length = 200, nullable = false)
     private String token;
 }
