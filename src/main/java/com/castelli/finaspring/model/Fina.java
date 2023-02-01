@@ -34,14 +34,16 @@ public class Fina {
     @Column(length = 30, nullable = false)
     private String category;
 
+    @Column(length = 200, nullable = false)
+    private String tokenAuthenticatedUser;
+
 
     
     //@DateTimeFormat(pattern = "yyyy-MM")
     @JsonFormat(pattern="yyyy-MM")
     @JsonProperty("_date")
     private LocalDate date = LocalDate.now();
-    // @DateTimeFormat(pattern = "MMMM/YYYY")
-    // private LocalDate date;
+
 
     
 }
